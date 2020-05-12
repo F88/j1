@@ -1,16 +1,12 @@
 import colors from 'vuetify/es5/util/colors'
 
-const routerBase =
-  process.env.DEPLOY_ENV === 'GH_PAGES'
-    ? {
-        router: {
-          base: '/j1/'
-        }
-      }
-    : {}
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? '/j1/' : '/'
 
 export default {
   mode: 'universal',
+  router: {
+    base: routerBase
+  },
   srcDir: 'src',
   /*
    ** Headers of the page
@@ -94,7 +90,10 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
-  },
-  routerBase
+    extend(config, ctx) {
+      if (ctx.isDev && ctx.isClient) {
+        config.devtool = 'eval-source-map'
+      }
+    }
+  }
 }
