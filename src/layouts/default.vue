@@ -3,7 +3,9 @@
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
-      :clipped="clipped"
+      :clipped="false"
+      :expand-on-hover="false"
+      :floating="false"
       fixed
       app
     >
@@ -68,25 +70,46 @@
 export default {
   data() {
     return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
+      drawer: true,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
+          icon: 'mdi-calendar-text',
+          title: '1-1',
+          to: '/1'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: 'mdi-calendar-text',
+          title: '1',
+          to: '/1' + '?h1=a&h2=b&h3=c&h4=d&h5=e' + '&r1=1&r2=2&r3=3&r4=4&r5=5'
+        },
+        {
+          icon: 'mdi-calendar-text',
+          title: '2',
+          to:
+            '/2' +
+            '?h=a&h=b&h=c&h=d&h=e' +
+            '&r1=1-1&r1=1-2&r1=1-3&r1=1-4&r1=1-5' +
+            '&r2=2-1&r2=2-2&r2=2-3&r2=2-4&r2=2-5'
+        },
+        {
+          icon: 'mdi-calendar-text',
+          title: 'tsv',
+          to:
+            '/tsv' +
+            '?h=a%09b%09c%09d%09e' +
+            '&r=1-1%091-2%091-3%091-4%091-5' +
+            '&r=2-1%092-2%092-3%092-4%092-5'
+        },
+        {
+          icon: 'mdi-calendar-text',
+          title: 'url',
+          to: '/url' + '?url=https%3A%2F%2Fexample.com%2F%0A'
         }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      title: 'j'
     }
   }
 }

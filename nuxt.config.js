@@ -1,6 +1,8 @@
 import colors from 'vuetify/es5/util/colors'
 
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? '/j1/' : '/'
+const routerBase =
+  process.env.ROUTER_BASE ||
+  (process.env.DEPLOY_ENV === 'GH_PAGES' ? '/j1/' : '/')
 
 export default {
   mode: 'universal',
