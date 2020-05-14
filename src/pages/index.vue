@@ -4,7 +4,7 @@
       <div class="text-center">
         <logo />
         <vuetify-logo />
-        <QRCode />
+        <!--        <QRCode />-->
       </div>
       <v-card>
         <v-card-title class="headline">
@@ -66,13 +66,13 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
-import QRCode from '~/components/QRCode.vue'
+// import QRCode from '~/components/QRCode.vue'
 
 export default {
   components: {
     Logo,
-    VuetifyLogo,
-    QRCode
+    VuetifyLogo
+    // QRCode
   }
 }
 </script>
