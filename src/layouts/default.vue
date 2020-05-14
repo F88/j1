@@ -3,10 +3,10 @@
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
-      :clipped="false"
+      :clipped="clipped"
       :expand-on-hover="false"
       :floating="false"
-      fixed
+      :fixed="fixed"
       app
     >
       <v-list>
@@ -71,6 +71,8 @@ export default {
   data() {
     return {
       drawer: true,
+      clipped: false,
+      fixed: false,
       items: [
         {
           icon: 'mdi-calendar-text',
