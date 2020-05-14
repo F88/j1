@@ -6,7 +6,7 @@
     <v-simple-table>
       <template v-slot:default>
         <thead>
-          <th v-for="c in header" :key="c">
+          <th v-for="(c, index) in header" :key="index">
             {{ c }}
           </th>
         </thead>

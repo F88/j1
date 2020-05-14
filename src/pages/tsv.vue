@@ -4,17 +4,20 @@
       <div id="table">
         <div>{{ $route.query }}</div>
         <QRCode :url="link1.url" :title="link1.title" />
+        <span>
+          <QRCode url="https://httpbin.org/" title="httpbin.org" />
+        </span>
         <h1>{{ title }}</h1>
         <v-simple-table>
           <template v-slot:default>
             <thead>
-              <th v-for="c in header" :key="c">
+              <th v-for="(c, index) in header" :key="index">
                 {{ c }}
               </th>
             </thead>
             <tbody>
-              <tr v-for="r in rows" :key="r">
-                <td v-for="c in r" :key="c">{{ c }}</td>
+              <tr v-for="(r, i) in rows" :key="i">
+                <td v-for="(c, j) in r" :key="j">{{ c }}</td>
               </tr>
             </tbody>
           </template>
