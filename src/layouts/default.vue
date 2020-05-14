@@ -103,9 +103,22 @@ export default {
             '&r=2-1%092-2%092-3%092-4%092-5'
         },
         {
+          // http://jsonplaceholder.typicode.com/users
           icon: 'mdi-calendar-text',
-          title: 'url',
-          to: '/url' + '?url=https%3A%2F%2Fexample.com%2F%0A'
+          title: 'url-1-1',
+          to: '/url' + '?url=http%3A%2F%2Fjsonplaceholder.typicode.com%2Fusers'
+        },
+        {
+          // http://jsonplaceholder.typicode.com/posts
+          icon: 'mdi-calendar-text',
+          title: 'url-1-2',
+          to: '/url' + '?url=http%3A%2F%2Fjsonplaceholder.typicode.com%2Fposts'
+        },
+        {
+          // https://reqres.in/api/users?page=2
+          icon: 'mdi-calendar-text',
+          title: 'url-2',
+          to: '/url' + '?url=https%3A%2F%2Freqres.in%2Fapi%2Fusers%3Fpage%3D2'
         }
       ],
       miniVariant: false,
