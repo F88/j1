@@ -3,6 +3,7 @@
     <div>{{ $route.query }}</div>
     <QRCode :url="link1.url" :title="link1.title" />
     <h1>{{ title }}</h1>
+    {{ data }}
     <v-simple-table>
       <template v-slot:default>
         <thead>
@@ -15,6 +16,8 @@
             <td>{{ item.id }}</td>
             <td>{{ item.name }}</td>
             <td>{{ item.company }}</td>
+            <td>{{ item.title }}</td>
+            <td>{{ item.body }}</td>
           </tr>
         </tbody>
       </template>
@@ -28,15 +31,31 @@ import axios from 'axios'
 import QRCode from '~/components/QRCode.vue'
 
 export default {
+  watchQuery: true,
   name: 'Print',
   components: {
     QRCode
   },
-  async asyncData({ params }) {
-    const { data } = await axios.get(
-      'http://jsonplaceholder.typicode.com/users'
-    )
-    return { data }
+  asyncData({ route, params, error }) {
+    const wl = [
+      'https://studyathome.web.app/api/',
+      'http://jsonplaceholder.typicode.com/',
+      'https://reqres.in/api/'
+    ]
+    const url = route.query.url || ''
+    if (wl.some((e) => url.startsWith(e))) {
+      return axios
+        .get(url)
+        .then((res) => {
+          return { data: res.data }
+        })
+        .catch((e) => {
+          // return { data: e }
+          error({ statusCode: 404, message: 'Data not found' })
+        })
+    } else {
+      return { data: [] }
+    }
   },
   data() {
     return {
