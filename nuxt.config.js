@@ -47,6 +47,7 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/style-resources',
     '@nuxtjs/vuetify'
   ],
   /*
@@ -64,6 +65,13 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  styleResources: {
+    scss: [
+      './assets/p.scss print',
+      './assets/vars/*.scss',
+      './assets/abstracts/_mixins.scss' // use underscore "_" & also file extension ".scss"
+    ]
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
@@ -71,7 +79,8 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      // dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,

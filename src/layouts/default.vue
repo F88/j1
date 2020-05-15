@@ -119,6 +119,11 @@ export default {
           icon: 'mdi-calendar-text',
           title: 'url-2',
           to: '/url' + '?url=https%3A%2F%2Freqres.in%2Fapi%2Fusers%3Fpage%3D2'
+        },
+        {
+          icon: 'mdi-layers-off',
+          title: 'test',
+          to: '/test-vuetify-display-helper'
         }
       ],
       miniVariant: false,
