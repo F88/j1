@@ -1,5 +1,8 @@
 <template>
   <div>
+    <v-card-title class="headline">
+      Welcome to the Vuetify
+    </v-card-title>
     <div class="d-none">Hidden on all</div>
     <div class="d-none d-sm-flex">Hidden only on xs</div>
     <div class="d-sm-none d-md-flex">Hidden only on sm</div>
@@ -50,3 +53,22 @@ export default {
   }
 }
 </script>
+<style>
+.v-application .headline {
+  font-weight: bolder;
+  font-size: 3rem !important;
+  line-height: 2rem !important;
+  font-family: 'Ubuntu' !important;
+  color: orangered;
+}
+@media print {
+  .v-application .headline {
+    font-weight: bolder !important;
+    font-family: 'Frijole', cursive !important;
+    font-size: 5rem !important;
+    letter-spacing: 0rem !important;
+    line-height: 1em !important;
+    color: blue;
+  }
+}
+</style>
