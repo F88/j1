@@ -37,6 +37,7 @@
 
 <script>
 import Table from '~/components/Table.vue'
+
 export default {
   name: 'Print',
   layout: 'print',
@@ -54,14 +55,33 @@ export default {
 }
 </script>
 <style>
-.v-application .headline {
-  font-weight: bolder;
-  font-size: 3rem !important;
-  line-height: 2rem !important;
-  font-family: 'Ubuntu' !important;
-  color: orangered;
+@media screen {
+  .v-application .headline {
+    font-weight: bolder;
+    font-size: 3rem !important;
+    line-height: 2rem !important;
+    font-family: 'Ubuntu' !important;
+    color: orangered;
+  }
+  .v-content {
+    background-image: url('/torinoko/p0026_l.png');
+    /*background-image: url('/torinoko/p0527_l.png');*/
+    /*background-image: url('/torinoko/p0531_l.png');*/
+    /*background-image: url('/torinoko/paper_00069.jpg');*/
+    /*background-image: url('/torinoko/paper_00101.jpg');*/
+    /*background-image: url('/torinoko/paper_00104.jpg');*/
+  }
 }
 @media print {
+  /*.v-navigation-drawer {*/
+  /*  display: none;*/
+  /*}*/
+  /*.v-navigation-drawer__content {*/
+  /*  display: none;*/
+  /*}*/
+  .v-app-bar {
+    display: none;
+  }
   .v-application .headline {
     font-weight: bolder !important;
     font-family: 'Frijole', cursive !important;
@@ -69,6 +89,9 @@ export default {
     letter-spacing: 0rem !important;
     line-height: 1em !important;
     color: blue;
+  }
+  .v-content {
+    background-image: url('/torinoko/p0026_l.png');
   }
 }
 </style>
