@@ -64,12 +64,12 @@ export default {
     color: orangered;
   }
   .v-content {
-    background-image: url('/torinoko/p0026_l.png');
-    /*background-image: url('/torinoko/p0527_l.png');*/
-    /*background-image: url('/torinoko/p0531_l.png');*/
-    /*background-image: url('/torinoko/paper_00069.jpg');*/
-    /*background-image: url('/torinoko/paper_00101.jpg');*/
-    /*background-image: url('/torinoko/paper_00104.jpg');*/
+    background-image: url('~static/torinoko/p0026_l.jpeg');
+    /*background-image: url('~static/torinoko/p0527_l.png');*/
+    /*background-image: url('~static/torinoko/p0531_l.png');*/
+    /*background-image: url('~static/torinoko/paper_00069.jpg');*/
+    /*background-image: url('~static/torinoko/paper_00101.jpg');*/
+    /*background-image: url('~static/torinoko/paper_00104.jpg');*/
   }
 }
 @media print {
@@ -91,7 +91,7 @@ export default {
     color: blue;
   }
   .v-content {
-    background-image: url('/torinoko/p0026_l.png');
+    background-image: url('~static/torinoko/paper_00101.jpg');
   }
 }
 </style>
