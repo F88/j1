@@ -7,9 +7,9 @@ externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
 servers:
+- url: https://us-central1-odp-01.cloudfunctions.net/api
 - url: https://virtserver.swaggerhub.com/R8800/sah/v0
   description: SwaggerHub API Auto Mocking
-- url: https://us-central1-odp-01.cloudfunctions.net/api
 tags:
 - name: class
 - name: jikan
