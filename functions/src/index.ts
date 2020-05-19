@@ -9,6 +9,12 @@ const server = jsonServer.create()
 const router = jsonServer.router('db.json')
 const middlewares = jsonServer.defaults()
 
+server.use(
+  jsonServer.rewriter({
+    '/v2020*/*': '/$2',
+    '/classes/:id/lessons': '/lessons'
+  })
+)
 server.use(middlewares)
 server.use(router)
 
