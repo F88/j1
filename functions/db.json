@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "name": "foo1"
+    },
+    {
+      "id": 1,
+      "name": "foo2"
+    }
+  ],
+  "jikans": [
+    {
+      "title": "自由研究",
+      "description": "なんでもOK",
+      "start": "2020-05-01T00:00:00.000Z",
+      "duration": 45
+    },
+    {
+      "title": "自由研究",
+      "description": "なんでもOK",
+      "start": "2020-05-01T01:00:00.000Z",
+      "duration": 45
+    },
+    {
+      "title": "自由研究",
+      "description": "なんでもOK",
+      "start": "2020-05-01T02:00:00.000Z",
+      "duration": 45
+    }
+  ],
+  "videos": [
+    {
+      "title": "『チバテレの学習支援番組』小学４年生社会①（千葉市教育委員会）（2020.5.15放送）【チバテレ公式】",
+      "description": "「わたしたちが住む千葉県」\n\n小中学生向けの学習支援番組を制作、チバテレ第２チャンネルで放送した動画を公開します。",
+      "url": "https://www.youtube.com/watch?v=B3RL4BZkZpY",
+      "duration": "951",
+      "publishedAt": "2020-05-14T01:00:00.000Z",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/7lCDEYXw3mM/default.jpg"
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/7lCDEYXw3mM/mqdefault.jpg"
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/7lCDEYXw3mM/hqdefault.jpg"
+        }
+      }
+    },
+    {
+      "title": "便利って本当にいいこと？",
+      "description": "楽で便利な世界にならないかと夢想するＱくん。そこにチッチが、便利ってそんなにいいことなの？と問いかける。次第に、不便の中にも幸せがあることを知っていく。",
+      "url": "https://www.nhk.or.jp/sougou/q/?das_id=D0005180283_00000",
+      "duration": "900",
+      "publishedAt": "2020-04-23T00:00:00.000Z",
+      "thumbnails": {
+        "default": {
+          "url": "https://www.nhk.or.jp/das/image/D0005180/D0005180283_00000_S_001.jpg"
+        }
+      }
+    }
+  ]
+}
